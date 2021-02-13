@@ -30,7 +30,7 @@ $ expo start
 ```
 
 In another terminal, start up CLJS build:
-
+`
 ```
 $ yarn
 $ npx shadow-cljs server

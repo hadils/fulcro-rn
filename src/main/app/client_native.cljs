@@ -8,6 +8,7 @@
     [com.fulcrologic.fulcro.networking.http-remote :as net]
     [com.fulcrologic.fulcro.application :as app]
     [com.fulcrologic.fulcro.ui-state-machines :as uism]
+    [com.fulcrologic.fulcro.routing.dynamic-routing :as dr]
     [app.model.session :as session]))
 
 ;; See defines in shadow-cljs for dev mode
@@ -28,4 +29,10 @@
                  :remotes          {:remote (net/fulcro-http-remote {:url        SERVER_URL
                                                                      :make-xhrio #(doto (net/make-xhrio)
                                                                                     (.setWithCredentials true))})}}))
+  (app/set-root! @SPA root/Root {:initialize-state? true})
+  (dr/initialize! @SPA)
+  (uism/begin! @SPA session/session-machine ::session/session
+    {:actor/login-form      root/Login
+     :actor/current-session session/Session})
+  (dr/change-route! @SPA ["main"])
   (start))

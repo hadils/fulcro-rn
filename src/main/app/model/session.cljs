@@ -96,8 +96,12 @@
 
     :state/logged-out
     {::uism/events (merge global-events
-                     {:event/login {::uism/target-states #{:state/checking-session}
-                                    ::uism/handler       login}})}}})
+                     {:event/login    {::uism/target-states #{:state/checking-session}
+                                       ::uism/handler       login}
+                      :event/complete {::uism/target-states #{:state/logged-in}
+                                       ::uism               #(do
+                                                               (log/info ":state/logged-out :event/complete")
+                                                               (login %))}})}}})
 
 (def signup-ident [:component/id :signup])
 (defn signup-class [] (comp/registry-key->class :app.ui.root/Signup))

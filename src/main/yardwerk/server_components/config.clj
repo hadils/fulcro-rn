@@ -1,4 +1,4 @@
-(ns app.server-components.config
+(ns yardwerk.server-components.config
   (:require
     [mount.core :refer [defstate args]]
     [com.fulcrologic.fulcro.server.config :refer [load-config!]]

@@ -1,3 +1,3 @@
-(ns app.application)
+(ns yardwerk.application)
 
 (defonce SPA (atom nil))

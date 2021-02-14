@@ -1,7 +1,7 @@
-(ns app.server-components.pathom
+(ns yardwerk.server-components.pathom
   (:require
-    [app.model.session :as session]
-    [app.server-components.config :refer [config]]
+    [yardwerk.model.session :as session]
+    [yardwerk.server-components.config :refer [config]]
     [clojure.core.async :as async]
     [com.wsscode.pathom.connect :as pc]
     [com.wsscode.pathom.core :as p]

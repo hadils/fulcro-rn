@@ -1,4 +1,4 @@
-(ns app.mobile-ui.native-base
+(ns yardwerk.mobile-ui.native-base
   "Convenience wrappers for Native Base components"
   (:require
     [com.fulcrologic.fulcro-native.alpha.components :as c :refer [react-factory]]

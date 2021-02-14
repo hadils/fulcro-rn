@@ -1,4 +1,4 @@
-(ns app.model.session
+(ns yardwerk.model.session
   (:require
     [com.wsscode.pathom.connect :as pc :refer [defresolver defmutation]]
     [taoensso.timbre :as log]

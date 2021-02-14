@@ -1,15 +1,15 @@
-(ns app.client-native
+(ns yardwerk.client-native
   "Entry point for native client."
   (:require
-    [app.application :refer [SPA]]
+    [yardwerk.application :refer [SPA]]
     [fulcro-native.expo-application :as expo]
-    [app.mobile-ui.root :as root]
+    [yardwerk.mobile-ui.root :as root]
     [taoensso.timbre :as log]
     [com.fulcrologic.fulcro.networking.http-remote :as net]
     [com.fulcrologic.fulcro.application :as app]
     [com.fulcrologic.fulcro.ui-state-machines :as uism]
     [com.fulcrologic.fulcro.routing.dynamic-routing :as dr]
-    [app.model.session :as session]))
+    [yardwerk.model.session :as session]))
 
 ;; See defines in shadow-cljs for dev mode
 (goog-define SERVER_URL "http://production.server.com/api-native")

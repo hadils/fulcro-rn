@@ -1,7 +1,7 @@
-(ns app.server-components.middleware
+(ns yardwerk.server-components.middleware
   (:require
-    [app.server-components.config :refer [config]]
-    [app.server-components.pathom :refer [parser]]
+    [yardwerk.server-components.config :refer [config]]
+    [yardwerk.server-components.pathom :refer [parser]]
     [mount.core :refer [defstate]]
     [com.fulcrologic.fulcro.server.api-middleware :refer [handle-api-request
                                                           wrap-transit-params

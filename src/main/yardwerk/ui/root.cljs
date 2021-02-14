@@ -1,6 +1,6 @@
-(ns app.ui.root
+(ns yardwerk.ui.root
   (:require
-    [app.model.session :as session :refer [Session]]
+    [yardwerk.model.session :as session :refer [Session]]
     [com.fulcrologic.fulcro.dom :as dom :refer [div ul li p h3 button]]
     [com.fulcrologic.fulcro.dom.html-entities :as ent]
     [com.fulcrologic.fulcro.dom.events :as evt]

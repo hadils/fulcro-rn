@@ -1,4 +1,4 @@
-(ns app.mobile-ui.root
+(ns yardwerk.mobile-ui.root
   (:require
     [com.fulcrologic.fulcro-native.alpha.components :refer [react-factory ui-text ui-view]]
     [com.fulcrologic.fulcro-native.events :refer [event-text]]
@@ -6,8 +6,8 @@
     [com.fulcrologic.fulcro.mutations :as m :refer [defmutation]]
     [com.fulcrologic.fulcro.routing.dynamic-routing :as dr :refer [defrouter]]
     [com.fulcrologic.fulcro.ui-state-machines :as uism]
-    [app.mobile-ui.native-base :as b]
-    [app.model.session :as session]))
+    [yardwerk.mobile-ui.native-base :as b]
+    [yardwerk.model.session :as session]))
 
 (defn ui-error-card
   "Renders a Native Base card with the given message in it."

@@ -1,13 +1,13 @@
-(ns app.client
+(ns yardwerk.client
   "Entry point for web client"
   (:require
-    [app.application :refer [SPA]]
+    [yardwerk.application :refer [SPA]]
     [com.fulcrologic.fulcro.application :as app]
-    [app.ui.root :as root]
+    [yardwerk.ui.root :as root]
     [com.fulcrologic.fulcro.networking.http-remote :as net]
     [com.fulcrologic.fulcro.ui-state-machines :as uism]
     [com.fulcrologic.fulcro-css.css-injection :as cssi]
-    [app.model.session :as session]
+    [yardwerk.model.session :as session]
     [taoensso.timbre :as log]
     [com.fulcrologic.fulcro.routing.dynamic-routing :as dr]))
 

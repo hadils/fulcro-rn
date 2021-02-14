@@ -1,7 +1,7 @@
-(ns app.server-components.http-server
+(ns yardwerk.server-components.http-server
   (:require
-    [app.server-components.config :refer [config]]
-    [app.server-components.middleware :refer [middleware]]
+    [yardwerk.server-components.config :refer [config]]
+    [yardwerk.server-components.middleware :refer [middleware]]
     [clojure.pprint :refer [pprint]]
     [mount.core :refer [defstate]]
     [org.httpkit.server :as http-kit]

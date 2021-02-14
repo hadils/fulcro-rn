@@ -1,4 +1,4 @@
-(ns app.inspect-native-preload
+(ns yardwerk.inspect-native-preload
   (:require
     [com.fulcrologic.fulcro.inspect.inspect-client :as inspect]
     [com.fulcrologic.fulcro.inspect.inspect-ws :as inspect-ws]

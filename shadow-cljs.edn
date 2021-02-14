@@ -5,19 +5,19 @@
             {:target     :browser
              :output-dir "resources/public/js/main"
              :asset-path "/js/main"
-             :modules    {:main {:init-fn app.client/init
-                                 :entries [app.client]}}
+             :modules    {:main {:init-fn yardwerk.client/init
+                                 :entries [yardwerk.client]}}
              :dev        {:closure-defines  {'goog.DEBUG true}
                           :compiler-options {:external-config {:guardrails {}}}}
-             :devtools   {:after-load app.client/refresh
-                          :preloads   [com.fulcrologic.fulcro.inspect.preload app.development-preload]}}
+             :devtools   {:after-load yardwerk.client/refresh
+                          :preloads   [com.fulcrologic.fulcro.inspect.preload yardwerk.development-preload]}}
 
             :native
             {:target     :react-native
-             :init-fn    app.client-native/init
+             :init-fn    yardwerk.client-native/init
              :output-dir "mobile/app"
              :dev        {:closure-defines  {'goog.DEBUG                  true
-                                             app.client-native/SERVER_URL "http://localhost:3000/api-native"}
+                                             yardwerk.client-native/SERVER_URL "http://localhost:3000/api-native"}
                           :compiler-options {:external-config {:guardrails {}}}}
              :release    {:compiler-options {:optimizations     :simple
                                              :infer-externs     :auto
@@ -27,5 +27,5 @@
                                              :source-map        true}}
              :js-options {:node-modules-dir "mobile/node_modules"}
              :devtools   {:autoload   true
-                          :after-load app.client-native/start
-                          :preloads   [shadow.expo.keep-awake app.inspect-native-preload]}}}}
+                          :after-load yardwerk.client-native/start
+                          :preloads   [shadow.expo.keep-awake yardwerk.inspect-native-preload]}}}}

@@ -4,7 +4,6 @@
     "slug": "ucv-attendance",
     "privacy": "unlisted",
     "entryPoint": "./app/index.js",
-    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android"
